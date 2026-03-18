@@ -13,6 +13,11 @@ on:
           - minor
           - patch
           - custom
+      release_branch:
+        description: "Release branch"
+        required: true
+        type: string
+        default: ""
       custom_version:
         description: "Custom version (only if 'custom' is selected above)"
         required: false
@@ -27,6 +32,7 @@ jobs:
     uses: 4ndrs/shared-actions-testing/.github/workflows/reusable-release.yml@v1.0.1
     with:
       release_type: ${{ inputs.release_type }}
+      release_branch: ${{ inputs.release_branch }}
       custom_version: ${{ inputs.custom_version }}
     secrets:
       NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
