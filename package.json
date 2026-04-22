@@ -6,7 +6,7 @@
     "lint": "echo linting desu",
     "build": "echo building desu",
     "release": "pnpm lint && pnpm build && release-it --only-version",
-    "release:cli": "pnpm lint && pnpm build && release-it --increment \"${RELEASE_TYPE:-patch}\" --ci",
+    "release:cli": "pnpm lint && pnpm build && release-it -VV --increment \"${RELEASE_TYPE:-patch}\" --ci",
     "release:cli-custom": "pnpm lint && pnpm build && release-it \"${RELEASE_TYPE}\" --ci"
   },
   "devDependencies": {
