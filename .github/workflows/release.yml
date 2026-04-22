@@ -29,7 +29,7 @@ permissions:
 
 jobs:
   release:
-    uses: akuyaku-reijou/shared-actions-testing/.github/workflows/reusable-release.yml@v4
+    uses: akuyaku-reijou/shared-actions-testing/.github/workflows/reusable-release.yml@v5
     with:
       release_type: ${{ inputs.release_type }}
       release_branch: ${{ inputs.release_branch }}
