@@ -24,12 +24,14 @@ permissions:
 
 jobs:
   release:
-    uses: akuyaku-reijou/shared-actions-testing/.github/workflows/reusable-release.yml@v5
+    uses: akuyaku-reijou/shared-actions-testing/.github/workflows/reusable-release.yml@main
     with:
       unauthorized_branch: develop
       release_type: ${{ inputs.release_type }}
       custom_version: ${{ inputs.custom_version }}
       APP_ID: ${{ vars.APP_ID }}
+      node_version: "22"
+      pnpm-version: "10"
     secrets:
       NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
       APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
